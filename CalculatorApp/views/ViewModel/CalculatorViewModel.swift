@@ -13,7 +13,7 @@ extension CalculatorView {
     final class ViewModel: ObservableObject {
         
         @Published private var calculator = Calculator()
-
+        
         var displayText: String {
             return calculator.displaytext
         }
@@ -46,6 +46,13 @@ extension CalculatorView {
             case .clear:
                 calculator.clear()
             }
+        }
+        
+        // MARK: - HELPERS
+        /// Checks if current buttonType of type .arithmeticOperation is active
+        func buttonTypeIsHighlighted(buttonType: ButtonType) -> Bool {
+            guard case .arithmeticOperation(let operation) = buttonType else { return false}
+            return calculator.operationIsHighlighted(operation)
         }
     }
 }
