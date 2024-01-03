@@ -1,5 +1,5 @@
 //
-//  CalculatorAppApp.swift
+//  CalculatorApp.swift
 //  CalculatorApp
 //
 //  Created by Kevin Wafula on 03/01/2024.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct CalculatorAppApp: App {
+struct CalculatorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CalculatorView().environmentObject(CalculatorView.ViewModel())
         }
     }
 }
