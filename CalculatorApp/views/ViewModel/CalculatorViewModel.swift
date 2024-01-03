@@ -19,11 +19,13 @@ extension CalculatorView {
         }
         
         var buttonTypes: [[ButtonType]] {
-            [[.allClear, .negative, .percent, .arithmeticOperation(.division)],
-             [.digit(.seven), .digit(.eight), .digit(.nine), .arithmeticOperation(.multiplication)],
-             [.digit(.four), .digit(.five), .digit(.six), .arithmeticOperation(.subtraction)],
-             [.digit(.one), .digit(.two), .digit(.three), .arithmeticOperation(.addition)],
-             [.digit(.zero), .decimal, .equals]
+            let clearType: ButtonType = calculator.showAllClear ? .allClear : .clear
+            return [
+                [clearType, .negative, .percent, .arithmeticOperation(.division)],
+                [.digit(.seven), .digit(.eight), .digit(.nine), .arithmeticOperation(.multiplication)],
+                [.digit(.four), .digit(.five), .digit(.six), .arithmeticOperation(.subtraction)],
+                [.digit(.one), .digit(.two), .digit(.three), .arithmeticOperation(.addition)],
+                [.digit(.zero), .decimal, .equals]
             ]
         }
         
