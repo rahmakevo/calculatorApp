@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ArithmeticOperation: CaseIterable, CustomStringConvertible {
+enum ArithmeticOperation: CaseIterable, CustomStringConvertible, Hashable {
     
     
     case addition, subtraction, multiplication, division

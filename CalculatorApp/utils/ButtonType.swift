@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum ButtonType {
+enum ButtonType: Hashable {
     case digit(_ digit: Digit)
     case operation(_ operation: ArithmeticOperation)
     

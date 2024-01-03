@@ -18,21 +18,47 @@ struct CalculatorView: View {
         ]
     }
     
-    
     var body: some View {
         VStack {
             Spacer()
-            Text("0")
-                .padding()
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .font(.system(size: 88, weight: .light))
-                .lineLimit(1)
-                .minimumScaleFactor(0.2)
+            displayText
+            buttonPad
         }.background(Color.black)
     }
 }
 
-#Preview {
-    CalculatorView()
+
+extension CalculatorView {
+    private var displayText: some View {
+        Text("0")
+            .padding()
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .font(.system(size: 88, weight: .light))
+            .lineLimit(1)
+            .minimumScaleFactor(0.2)
+    }
+    
+    private var buttonPad: some View {
+        VStack {
+            ForEach(buttonTypes, id: \.self) { row in
+                HStack {
+                    ForEach(row, id: \.self) { buttonType in
+                        Button(buttonType.description) { }
+                            .buttonStyle(CalculatorButtonStyle(
+                                size: 80,
+                                backgroundColor: buttonType.backgroundColor,
+                                foregroundColor: buttonType.foregroundColor)
+                            )
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct CalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorView()
+    }
 }
