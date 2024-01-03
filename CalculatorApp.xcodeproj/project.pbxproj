@@ -15,6 +15,7 @@
 		08EDED842B45339A00F30839 /* Digit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED832B45339A00F30839 /* Digit.swift */; };
 		08EDED862B4533FB00F30839 /* ArithmeticOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */; };
 		08EDED8B2B45421D00F30839 /* CalculatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED8A2B45421D00F30839 /* CalculatorButtonStyle.swift */; };
+		08EDED8D2B45459400F30839 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED8C2B45459400F30839 /* CalculatorButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		08EDED832B45339A00F30839 /* Digit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Digit.swift; sourceTree = "<group>"; };
 		08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperation.swift; sourceTree = "<group>"; };
 		08EDED8A2B45421D00F30839 /* CalculatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonStyle.swift; sourceTree = "<group>"; };
+		08EDED8C2B45459400F30839 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				08EDED812B4532E400F30839 /* ButtonType.swift */,
 				08EDED832B45339A00F30839 /* Digit.swift */,
 				08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */,
+				08EDED8C2B45459400F30839 /* CalculatorButton.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				08EDED862B4533FB00F30839 /* ArithmeticOperation.swift in Sources */,
+				08EDED8D2B45459400F30839 /* CalculatorButton.swift in Sources */,
 				08EDED7F2B45320500F30839 /* CalculatorView.swift in Sources */,
 				08EDED822B4532E400F30839 /* ButtonType.swift in Sources */,
 				08EDED8B2B45421D00F30839 /* CalculatorButtonStyle.swift in Sources */,
