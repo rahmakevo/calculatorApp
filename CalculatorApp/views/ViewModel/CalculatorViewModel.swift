@@ -1,0 +1,51 @@
+//
+//  CalculatorViewModel.swift
+//  CalculatorApp
+//
+//  Created by Kevin Wafula on 03/01/2024.
+//
+
+import Foundation
+import Combine
+
+extension CalculatorView {
+    
+    final class ViewModel: ObservableObject {
+        
+        @Published private var calculator = Calculator()
+
+        var displayText: String {
+            return calculator.displaytext
+        }
+        
+        var buttonTypes: [[ButtonType]] {
+            [[.allClear, .negative, .percent, .arithmeticOperation(.division)],
+             [.digit(.seven), .digit(.eight), .digit(.nine), .arithmeticOperation(.multiplication)],
+             [.digit(.four), .digit(.five), .digit(.six), .arithmeticOperation(.subtraction)],
+             [.digit(.one), .digit(.two), .digit(.three), .arithmeticOperation(.addition)],
+             [.digit(.zero), .decimal, .equals]
+            ]
+        }
+        
+        func performAction(for buttonType: ButtonType) {
+            switch buttonType {
+            case .digit(let digit):
+                calculator.setDigit(digit)
+            case .arithmeticOperation(let operation):
+                calculator.setOperation(operation)
+            case .negative:
+                calculator.toggleSign()
+            case .percent:
+                calculator.setPercent()
+            case .decimal:
+                calculator.setDecimal()
+            case .equals:
+                calculator.evaluate()
+            case .allClear:
+                calculator.allClear()
+            case .clear:
+                calculator.clear()
+            }
+        }
+    }
+}

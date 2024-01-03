@@ -10,7 +10,7 @@ import SwiftUI
 
 enum ButtonType: Hashable {
     case digit(_ digit: Digit)
-    case operation(_ operation: ArithmeticOperation)
+    case arithmeticOperation(_ operation: ArithmeticOperation)
     
     case negative
     case percent
@@ -23,7 +23,7 @@ enum ButtonType: Hashable {
         switch self {
         case .digit(let digit):
             return digit.description
-        case .operation(let operation):
+        case .arithmeticOperation(let operation):
             return operation.description
         case .negative:
             return "±"
@@ -44,7 +44,7 @@ enum ButtonType: Hashable {
         switch self {
         case .allClear, .clear, .negative, .percent:
             return Color(.lightGray)
-        case .operation, .equals:
+        case .arithmeticOperation, .equals:
             return Color(.orange)
         case .digit, .decimal:
             return .secondary
