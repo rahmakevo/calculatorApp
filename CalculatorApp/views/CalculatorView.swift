@@ -23,7 +23,9 @@ struct CalculatorView: View {
             Spacer()
             displayText
             buttonPad
-        }.background(Color.black)
+        }
+        .padding(Constants.padding)
+        .background(Color.black)
     }
 }
 

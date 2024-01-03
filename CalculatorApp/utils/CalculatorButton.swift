@@ -14,13 +14,21 @@ struct CalculatorButton: View {
         Button(buttonType.description) { }
         
             .buttonStyle(CalculatorButtonStyle(
-                size: 80,
+                size: getButtonSize(),
                 backgroundColor: buttonType.backgroundColor,
-                foregroundColor: buttonType.foregroundColor))
+                foregroundColor: buttonType.foregroundColor,
+                isWide: buttonType == .digit(.zero)))
+    }
+    
+    private func getButtonSize() -> CGFloat {
+        let screenWidth = UIScreen.main.bounds.width
+        let buttonCount: CGFloat = 4
+        let spacingCount = buttonCount + 1
+        return (screenWidth - (spacingCount * Constants.padding)) / buttonCount
     }
 }
 
-struct CalculatorButton_Preview: PreviewProvider {
+struct CalculatorButton_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorButton(buttonType: .digit(.five))
     }

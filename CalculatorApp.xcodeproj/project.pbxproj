@@ -16,6 +16,7 @@
 		08EDED862B4533FB00F30839 /* ArithmeticOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */; };
 		08EDED8B2B45421D00F30839 /* CalculatorButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED8A2B45421D00F30839 /* CalculatorButtonStyle.swift */; };
 		08EDED8D2B45459400F30839 /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED8C2B45459400F30839 /* CalculatorButton.swift */; };
+		08EDED8F2B4549AB00F30839 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EDED8E2B4549AB00F30839 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticOperation.swift; sourceTree = "<group>"; };
 		08EDED8A2B45421D00F30839 /* CalculatorButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonStyle.swift; sourceTree = "<group>"; };
 		08EDED8C2B45459400F30839 /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		08EDED8E2B4549AB00F30839 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				08EDED832B45339A00F30839 /* Digit.swift */,
 				08EDED852B4533FB00F30839 /* ArithmeticOperation.swift */,
 				08EDED8C2B45459400F30839 /* CalculatorButton.swift */,
+				08EDED8E2B4549AB00F30839 /* Constants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				08EDED8B2B45421D00F30839 /* CalculatorButtonStyle.swift in Sources */,
 				08EDED702B45310400F30839 /* CalculatorAppApp.swift in Sources */,
 				08EDED842B45339A00F30839 /* Digit.swift in Sources */,
+				08EDED8F2B4549AB00F30839 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
